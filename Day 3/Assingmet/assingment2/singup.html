@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    
+    <link rel="stylesheet" href="index.css" />
+</head>
+<body>
+    
+    
+        <form action="" id="form">
+            <h2> Singup</h2>
+            <input placeholder="Enter Name" id="name"  type="text" />
+            <input placeholder="Enter email" type="email"  id="email" />
+           
+            <input placeholder="Create Password" type="password" id="pass"/>
+           
+            <input id="submit" type="submit"  value="Submit" />
+        </form>
+             
+</body>
+</html>
+<script>
+ document.querySelector("#form").addEventListener("submit",formsubmit)
+
+
+  function formsubmit(){
+      event.preventDefault()
+
+      fromObj={
+         personName:form.name.value,
+          personEmail:form.email.value,
+         
+          personpass:form.pass.value,
+         
+      };
+      
+          window.location.href="login.html"
+     
+    
+    localStorage.setItem("userdata",JSON.stringify(fromObj));
+   }
+</script>
